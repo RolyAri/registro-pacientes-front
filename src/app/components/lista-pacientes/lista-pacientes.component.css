@@ -1,0 +1,10 @@
+table {
+    width: 100%;
+}
+.ml-2{
+  margin-left: 2rem;
+}
+.container-button{
+  display: flex;
+  justify-content: flex-end;
+}
