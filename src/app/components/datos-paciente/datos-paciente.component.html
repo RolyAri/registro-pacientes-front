@@ -1,173 +1,179 @@
 <div class="mat-elevation-z8">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Datos del Paciente</mat-card-title>
-      </mat-card-header>
-        <mat-card-content>
-          <mat-form-field appearance="outline" class="col-lg-3 col-md-5 col-sm-12 col-12 mr-10">
-            <mat-label>Tipo Documento</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let tipo of tiposDocumentos" [value]="tipo.id_tipo_documento_identidad">
-                {{tipo.codigo_ieds}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" appearance="outline" formControlName="asda">
-            <mat-label>N° doc.</mat-label>
-            <input matInput placeholder="DNI/CE">
-          </mat-form-field>
-          <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" col-md-4 appearance="outline">
-            <mat-label>Apellido Paterno</mat-label>
-            <input matInput placeholder="Ap. Paterno">
-          </mat-form-field>
-          <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" col-md-4 appearance="outline">
-            <mat-label>Apellido Materno</mat-label>
-            <input matInput placeholder="Ap.Materno">
-          </mat-form-field>
-          <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
-            <mat-label>Nombres</mat-label>
-            <input matInput placeholder="Nombre Completo">
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
-            <mat-label>Sexo</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let sexo of sexos" [value]="sexo.id_sexo">
-                {{sexo.descripcion_sexo}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="col-lg-3 col-md-5 col-sm-12 col-12 mr-10">
-            <mat-label>Fecha de Ncmto</mat-label>
-            <input matInput [matDatepicker]="picker">
-            <mat-hint>MM/DD/YYYY</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-          <mat-form-field class="col-lg-1 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
-            <mat-label>Edad</mat-label>
-            <input matInput placeholder="Edad">
-          </mat-form-field>
-          <mat-form-field class="col-lg-5 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
-            <mat-label>Lugar de Nacimiento</mat-label>
-            <input matInput placeholder="Lugar de Nacimiento">
-          </mat-form-field>
-          <mat-form-field class="col-lg-5 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
-            <mat-label>Direccion</mat-label>
-            <input matInput placeholder="Lugar de Nacimiento">
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
-            <mat-label>Departamento</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let dpto of departamentos" [value]="dpto.codigo_departamento">
-                {{dpto.descripcion_departamento}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
-            <mat-label>Provincia</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let pro of provincias" [value]="pro.codigo_provincia">
-                {{pro.descripcion_provincia}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
-            <mat-label>Distrito</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let distrito of distritos" [value]="distrito.codigo_distrito">
-                {{distrito.descripcion_distrito}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </mat-card-content>
-    </mat-card>
-  </div>
 
-  <div class="mat-elevation-z8" style="margin-top: 2rem;">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Datos del Acompañante</mat-card-title>
-      </mat-card-header>
-        <mat-card-content>
-          <mat-form-field appearance="outline" class="col-lg-3 col-md-5 col-sm-12 col-12 mr-10">
-            <mat-label>Tipo Documento</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let tipo of tiposDocumentos" [value]="tipo.id_tipo_documento_identidad">
-                {{tipo.codigo_ieds}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" appearance="outline" formControlName="asda">
-            <mat-label>N° doc.</mat-label>
-            <input matInput placeholder="DNI/CE">
-          </mat-form-field>
-          <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" col-md-4 appearance="outline">
-            <mat-label>Apellido Paterno</mat-label>
-            <input matInput placeholder="Ap. Paterno">
-          </mat-form-field>
-          <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" col-md-4 appearance="outline">
-            <mat-label>Apellido Materno</mat-label>
-            <input matInput placeholder="Ap.Materno">
-          </mat-form-field>
-          <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
-            <mat-label>Nombres</mat-label>
-            <input matInput placeholder="Nombre Completo">
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
-            <mat-label>Sexo</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let sexo of sexos" [value]="sexo.id_sexo">
-                {{sexo.descripcion_sexo}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="col-lg-3 col-md-5 col-sm-12 col-12 mr-10">
-            <mat-label>Fecha de Ncmto</mat-label>
-            <input matInput [matDatepicker]="picker">
-            <mat-hint>MM/DD/YYYY</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-          <mat-form-field class="col-lg-1 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
-            <mat-label>Edad</mat-label>
-            <input matInput placeholder="Edad">
-          </mat-form-field>
-          <mat-form-field class="col-lg-5 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
-            <mat-label>Lugar de Nacimiento</mat-label>
-            <input matInput placeholder="Lugar de Nacimiento">
-          </mat-form-field>
-          <mat-form-field class="col-lg-5 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
-            <mat-label>Direccion</mat-label>
-            <input matInput placeholder="Lugar de Nacimiento">
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
-            <mat-label>Departamento</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let dpto of departamentos" [value]="dpto.codigo_departamento">
-                {{dpto.descripcion_departamento}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
-            <mat-label>Provincia</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let pro of provincias" [value]="pro.codigo_provincia">
-                {{pro.descripcion_provincia}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
-            <mat-label>Distrito</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let distrito of distritos" [value]="distrito.codigo_distrito">
-                {{distrito.descripcion_distrito}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </mat-card-content>
-        <mat-card-actions align="end">
-            <button mat-raised-button color="primary" class="m-10">Guardar</button>
-            <button routerLink="/" type="reset" mat-raised-button color="accent" class="m-10">Cancelar</button>
-          </mat-card-actions>
-    </mat-card>
-  </div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Datos del Paciente</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="formPaciente">
+      <mat-form-field appearance="outline" class="col-lg-3 col-md-5 col-sm-12 col-12 mr-10">
+        <mat-label>Tipo Documento</mat-label>
+        <mat-select formControlName="pacienteTipoDocumento">
+          <mat-option *ngFor="let tipo of tiposDocumentos" [value]="tipo.id_tipo_documento_identidad">
+            {{tipo.codigo_ieds}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
+        <mat-label>N° doc.</mat-label>
+        <input matInput formControlName="pacienteNumDocumento" placeholder="DNI/CE/PA">
+      </mat-form-field>
+      <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" col-md-4 appearance="outline">
+        <mat-label>Apellido Paterno</mat-label>
+        <input matInput formControlName="pacienteApePaterno" placeholder="Ap. Paterno">
+      </mat-form-field>
+      <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" col-md-4 appearance="outline">
+        <mat-label>Apellido Materno</mat-label>
+        <input matInput formControlName="pacienteApeMaterno" placeholder="Ap.Materno">
+      </mat-form-field>
+      <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
+        <mat-label>Nombres</mat-label>
+        <input matInput formControlName="pacienteNombres" placeholder="Nombre Completo">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
+        <mat-label>Sexo</mat-label>
+        <mat-select formControlName="pacienteSexo">
+          <mat-option *ngFor="let sexo of sexos" [value]="sexo.id_sexo">
+            {{sexo.descripcion_sexo}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-3 col-md-5 col-sm-12 col-12 mr-10">
+        <mat-label>Fecha de Ncmto</mat-label>
+        <input formControlName="pacienteFechaNacimiento" matInput [matDatepicker]="picker" (dateChange)="calcularEdad($event.value, 'paciente')">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="col-lg-1 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
+        <mat-label>Edad</mat-label>
+        <input formControlName="pacienteEdad" matInput placeholder="Edad" [disabled]="true">
+      </mat-form-field>
+      <mat-form-field class="col-lg-5 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
+        <mat-label>Lugar de Nacimiento</mat-label>
+        <input matInput formControlName="pacienteLugarNacimiento" placeholder="Lugar de Nacimiento">
+      </mat-form-field>
+      <mat-form-field class="col-lg-5 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
+        <mat-label>Direccion</mat-label>
+        <input matInput formControlName="pacienteDireccion" placeholder="Lugar de Nacimiento">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
+        <mat-label>Departamento</mat-label>
+        <mat-select formControlName="pacienteIdDepartamento" (selectionChange)="obtenerProvinciasPorDpto($event.value, 'paciente')">
+          <mat-option *ngFor="let dpto of this.ubigeosEntidades.departamentos.paciente" [value]="dpto.codigo_departamento">
+            {{dpto.descripcion_departamento}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
+        <mat-label>Provincia</mat-label>
+        <mat-select formControlName="pacienteIdProvincia" (selectionChange)="obtenerDistritosPorProvinciaAndDpto($event.value, formPaciente.get('pacienteIdDepartamento')?.value, 'paciente')">
+          <mat-option *ngFor="let pro of this.ubigeosEntidades.provincias.paciente" [value]="pro.codigo_provincia">
+            {{pro.codigo_provincia=='00' ? 'Ninguno' : pro.descripcion_provincia}}
+          </mat-option>
+        </mat-select> 
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
+        <mat-label>Distrito</mat-label>
+        <mat-select formControlName="pacienteIdDistrito" >
+          <mat-option *ngFor="let distrito of this.ubigeosEntidades.distritos.paciente" [value]="distrito.codigo_distrito">
+            {{distrito.codigo_distrito=='00' ? 'Ninguno' : distrito.descripcion_distrito}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<div class="mat-elevation-z8" style="margin-top: 2rem;">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Datos del Acompañante</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="formAcompanante">
+      <mat-form-field appearance="outline" class="col-lg-3 col-md-5 col-sm-12 col-12 mr-10">
+        <mat-label>Tipo Documento</mat-label>
+        <mat-select formControlName="acompananteTipoDocumento">
+          <mat-option *ngFor="let tipo of tiposDocumentos" [value]="tipo.id_tipo_documento_identidad">
+            {{tipo.codigo_ieds}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
+        <mat-label>N° doc.</mat-label>
+        <input matInput formControlName="acompananteNumDocumento" placeholder="DNI/CE">
+      </mat-form-field>
+      <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" col-md-4 appearance="outline">
+        <mat-label>Apellido Paterno</mat-label>
+        <input matInput formControlName="acompananteApePaterno" placeholder="Ap. Paterno">
+      </mat-form-field>
+      <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" col-md-4 appearance="outline">
+        <mat-label>Apellido Materno</mat-label>
+        <input matInput formControlName="acompananteApeMaterno" placeholder="Ap.Materno">
+      </mat-form-field>
+      <mat-form-field class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
+        <mat-label>Nombres</mat-label>
+        <input matInput formControlName="acompananteNombres" placeholder="Nombre Completo">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
+        <mat-label>Sexo</mat-label>
+        <mat-select formControlName="acompananteSexo">
+          <mat-option *ngFor="let sexo of sexos" [value]="sexo.id_sexo">
+            {{sexo.descripcion_sexo}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-3 col-md-5 col-sm-12 col-12 mr-10">
+        <mat-label>Fecha de Ncmto</mat-label>
+        <input matInput formControlName="acompananteFechaNacimiento" [matDatepicker]="picker2" (dateChange)="calcularEdad($event.value, 'acompanante')">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="col-lg-1 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
+        <mat-label>Edad</mat-label>
+        <input  matInput formControlName="acompananteEdad" placeholder="Edad">
+      </mat-form-field>
+      <mat-form-field class="col-lg-5 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
+        <mat-label>Lugar de Nacimiento</mat-label>
+        <input matInput formControlName="acompananteLugarNacimiento" placeholder="Lugar de Nacimiento">
+      </mat-form-field>
+      <mat-form-field class="col-lg-5 col-md-5 col-sm-12 col-12 mr-10" appearance="outline">
+        <mat-label>Direccion</mat-label>
+        <input matInput formControlName="acompananteDireccion" placeholder="Lugar de Nacimiento">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
+        <mat-label>Departamento</mat-label>
+        <mat-select formControlName="acompananteIdDepartamento" (selectionChange)="obtenerProvinciasPorDpto($event.value, 'acompanante')">
+          <mat-option *ngFor="let dpto of this.ubigeosEntidades.departamentos.acompanante" [value]="dpto.codigo_departamento">
+            {{dpto.descripcion_departamento}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
+        <mat-label>Provincia</mat-label>
+        <mat-select formControlName="acompananteIdProvincia" (selectionChange)="obtenerDistritosPorProvinciaAndDpto($event.value, formAcompanante.get('acompananteIdDepartamento')?.value, 'acompanante')">
+          <mat-option *ngFor="let pro of this.ubigeosEntidades.provincias.acompanante" [value]="pro.codigo_provincia">
+            {{pro.codigo_provincia=='00' ? 'Ninguno' : pro.descripcion_provincia}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-2 col-md-5 col-sm-12 col-12 mr-10">
+        <mat-label>Distrito</mat-label>
+        <mat-select formControlName="acompananteIdDistrito">
+          <mat-option *ngFor="let distrito of this.ubigeosEntidades.distritos.acompanante" [value]="distrito.codigo_distrito">
+            {{distrito.codigo_distrito=='00' ? 'Ninguno' : distrito.descripcion_distrito}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="d-flex justify-content-end">
+  <button (click)="addPacienteAcompanante()" mat-raised-button color="primary" class="mt-4 mr-10">Guardar</button>
+      <button routerLink="/" type="reset" mat-raised-button color="accent" class="mt-4">Cancelar</button>
+</div>

@@ -14,7 +14,7 @@ export class DistritoService {
   constructor(private http: HttpClient) { 
     
   }
-  getList(): Observable<DistritoDTO[]> {
-    return this.http.get<DistritoDTO[]>(`${this.endpoint}/listar`);
+  getList(codPro: string, codDpto: string): Observable<DistritoDTO[]> {
+    return this.http.get<DistritoDTO[]>(`${this.endpoint}/${codPro}/${codDpto}`);
   }
 }

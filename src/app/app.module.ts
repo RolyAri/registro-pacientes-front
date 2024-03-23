@@ -23,7 +23,8 @@ import { DatosPacienteComponent } from './components/datos-paciente/datos-pacien
 import { CrearPacienteComponent } from './pages/crear-paciente/crear-paciente.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-
+//
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,

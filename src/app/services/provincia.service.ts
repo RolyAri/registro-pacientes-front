@@ -14,7 +14,7 @@ export class ProvinciaService {
   constructor(private http: HttpClient) { 
     
   }
-  getList(): Observable<ProvinciaDTO[]> {
-    return this.http.get<ProvinciaDTO[]>(`${this.endpoint}/listar`);
+  getList(codDpto: string): Observable<ProvinciaDTO[]> {
+    return this.http.get<ProvinciaDTO[]>(`${this.endpoint}/${codDpto}`);
   }
 }
